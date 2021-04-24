@@ -1,0 +1,14 @@
+<!-- list of all restaurants -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">YELP</a>
+</nav>
+
+<h1>Your Restaurants</h1>
+<ul class="list-group">
+  <% @restaurants.each do |restaurant| %>
+    <%= link_to restaurant.name, restaurant_path(restaurant) %>
+  <% end %>
+</ul>
+
+<%= link_to "Add a Restaurant", new_restaurant_path, class: 'btn btn-primary' %>
+
